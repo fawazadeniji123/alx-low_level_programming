@@ -7,19 +7,18 @@
 *Return: the deleted node data
 */
 
-int pop_listint(listint_t **head)
+int pop_listint(listint_t **head) 
 {
-listint_t *popped;
-int content;
+  listint_t *temp;
+  int n;
 
-if (*head == NULL)
-return (0);
+  if (*head == NULL) {
+      return 0;
+  }
 
-popped = *head;
-content = popped->n;
-free(popped);
-
-*head = (*head)->next;
-return (content);
-
+  temp = *head;
+  *head = (*head)->next;
+  n = temp->n;
+  free(temp);
+  return n;
 }
