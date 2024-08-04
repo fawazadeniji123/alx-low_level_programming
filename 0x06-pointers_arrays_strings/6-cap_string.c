@@ -4,6 +4,7 @@
 *@str: string to capitalize
 *Return:returns the capitalized string
 */
+
 char *cap_string(char *s)
 {
 	int i, j;
