@@ -8,9 +8,10 @@
 
 char *rot13(char *str)
 {
-	int index1, index2;
+	int index1 = 0, index2;
 
 	char alphabet[52] = {'A', 'B', 'C', 'D', 'E', 'F',
+
 											 'G', 'H', 'I', 'J', 'K', 'L',
 											 'M', 'N', 'O', 'P', 'Q', 'R',
 											 'S', 'T', 'U', 'V', 'W', 'X',
@@ -21,6 +22,7 @@ char *rot13(char *str)
 											 'w', 'x', 'y', 'z'};
 
 	char rot13key[52] = {'N', 'O', 'P', 'Q', 'R', 'S',
+
 											 'T', 'U', 'V', 'W', 'X', 'Y',
 											 'Z', 'A', 'B', 'C', 'D', 'E',
 											 'F', 'G', 'H', 'I', 'J', 'K',
@@ -29,8 +31,8 @@ char *rot13(char *str)
 											 'x', 'y', 'z', 'a', 'b', 'c',
 											 'd', 'e', 'f', 'g', 'h', 'i',
 											 'j', 'k', 'l', 'm'};
-	while (str[++index1])
-	{
+
+	do {
 		for (index2 = 0; index2 < 52; index2++)
 		{
 			if (str[index1] == alphabet[index2])
@@ -39,6 +41,6 @@ char *rot13(char *str)
 				break;
 			}
 		}
-	}
+	} while (str[++index1]);
 	return (str);
 }
