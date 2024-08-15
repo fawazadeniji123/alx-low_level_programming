@@ -1,34 +1,28 @@
-0x06. C - More pointers, arrays and strings
-===========================================
+# 0x06. C - More pointers, arrays and strings
 
--   By Julien Barbier
+- By Julien Barbier
 
-![](https://alx-intranet.hbtn.io/images/contents/low_level_programming/projects/happy-clapping.gif)
+![Happy Clapping](https://alx-intranet.hbtn.io/images/contents/low_level_programming/projects/happy-clapping.gif)
 
-Requirements
-------------
+## Requirements
 
 ### General
 
--   Allowed editors: `vi`, `vim`, `emacs`
--   All your files will be compiled on Ubuntu 20.04 LTS using `gcc`, using the options `-Wall -Werror -Wextra -pedantic -std=gnu89`
--   All your files should end with a new line
--   A `README.md` file, at the root of the folder of the project is mandatory
--   Your code should use the `Betty` style. It will be checked using [betty-style.pl](https://github.com/holbertonschool/Betty/blob/master/betty-style.pl "betty-style.pl") and [betty-doc.pl](https://github.com/holbertonschool/Betty/blob/master/betty-doc.pl "betty-doc.pl")
--   You are not allowed to use global variables
--   No more than 5 functions per file
--   You are not allowed to use the standard library. Any use of functions like `printf`, `puts`, etc... is forbidden
--   You are allowed to use [_putchar](https://github.com/holbertonschool/_putchar.c/blob/master/_putchar.c "_putchar")
--   You don't have to push `_putchar.c`, we will use our file. If you do it won't be taken into account
--   In the following examples, the `main.c` files are shown as examples. You can use them to test your functions, but you don't have to push them to your repo (if you do we won't take them into account). We will use our own `main.c` files at compilation. Our `main.c` files might be different from the one shown in the examples
--   The prototypes of all your functions and the prototype of the function `_putchar` should be included in your header file called `main.h`
--   Don't forget to push your header file
+- Allowed editors: `vi`, `vim`, `emacs`
+- All your files will be compiled on Ubuntu 20.04 LTS using `gcc`, using the options `-Wall -Werror -Wextra -pedantic -std=gnu89`
+- All your files should end with a new line
+- A `README.md` file, at the root of the folder of the project is mandatory
+- Your code should use the `Betty` style. It will be checked using [betty-style.pl](https://github.com/holbertonschool/Betty/blob/master/betty-style.pl 'betty-style.pl') and [betty-doc.pl](https://github.com/holbertonschool/Betty/blob/master/betty-doc.pl 'betty-doc.pl')
+- You are not allowed to use global variables
+- No more than 5 functions per file
+- You are not allowed to use the standard library. Any use of functions like `printf`, `puts`, etc... is forbidden
+- You are allowed to use [\_putchar](https://github.com/holbertonschool/_putchar.c/blob/master/_putchar.c '_putchar')
+- You don't have to push `_putchar.c`, we will use our file. If you do it won't be taken into account
+- In the following examples, the `main.c` files are shown as examples. You can use them to test your functions, but you don't have to push them to your repo (if you do we won't take them into account). We will use our own `main.c` files at compilation. Our `main.c` files might be different from the one shown in the examples
+- The prototypes of all your functions and the prototype of the function `_putchar` should be included in your header file called `main.h`
+- Don't forget to push your header file
 
-
-
-
-Tasks
------
+## Tasks
 
 ### 0\. strcat
 
@@ -36,13 +30,13 @@ mandatory
 
 Write a function that concatenates two strings.
 
--   Prototype: `char *_strcat(char *dest, char *src);`
--   This function appends the `src` string to the `dest` string, overwriting the terminating null byte (`\0`) at the end of `dest`, and then adds a terminating null byte
--   Returns a pointer to the resulting string `dest`
+- Prototype: `char *_strcat(char *dest, char *src);`
+- This function appends the `src` string to the `dest` string, overwriting the terminating null byte (`\0`) at the end of `dest`, and then adds a terminating null byte
+- Returns a pointer to the resulting string `dest`
 
 FYI: The standard library provides a similar function: `strcat`. Run `man strcat` to learn more.
 
-```
+```sh
 julien@ubuntu:~/0x06$ cat 0-main.c
 #include "main.h"
 #include <stdio.h>
@@ -79,11 +73,11 @@ julien@ubuntu:~/0x06$
 
 **Repo:**
 
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x06-pointers_arrays_strings`
--   File: `0-strcat.c`
+- GitHub repository: `alx-low_level_programming`
+- Directory: `0x06-pointers_arrays_strings`
+- File: `0-strcat.c`
 
- Done? Help
+Done? Help
 
 ### 1\. strncat
 
@@ -91,15 +85,15 @@ mandatory
 
 Write a function that concatenates two strings.
 
--   Prototype: `char *_strncat(char *dest, char *src, int n);`
--   The `_strncat` function is similar to the `_strcat` function, except that
-    -   it will use at most `n` bytes from `src`; and
-    -   `src` does not need to be null-terminated if it contains `n` or more bytes
--   Return a pointer to the resulting string `dest`
+- Prototype: `char *_strncat(char *dest, char *src, int n);`
+- The `_strncat` function is similar to the `_strcat` function, except that
+  - it will use at most `n` bytes from `src`; and
+  - `src` does not need to be null-terminated if it contains `n` or more bytes
+- Return a pointer to the resulting string `dest`
 
 FYI: The standard library provides a similar function: `strncat`. Run `man strncat` to learn more.
 
-```
+```sh
 julien@ubuntu:~/0x06$ cat 1-main.c
 #include "main.h"
 #include <stdio.h>
@@ -143,11 +137,11 @@ julien@ubuntu:~/0x06$
 
 **Repo:**
 
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x06-pointers_arrays_strings`
--   File: `1-strncat.c`
+- GitHub repository: `alx-low_level_programming`
+- Directory: `0x06-pointers_arrays_strings`
+- File: `1-strncat.c`
 
- Done? Help
+Done? Help
 
 ### 2\. strncpy
 
@@ -155,13 +149,13 @@ mandatory
 
 Write a function that copies a string.
 
--   Prototype: `char *_strncpy(char *dest, char *src, int n);`
+- Prototype: `char *_strncpy(char *dest, char *src, int n);`
 
--   Your function should work exactly like `strncpy`
+- Your function should work exactly like `strncpy`
 
 FYI: The standard library provides a similar function: `strncpy`. Run `man strncpy` to learn more.
 
-```
+```sh
 julien@ubuntu:~/0x06$ cat 2-main.c
 #include "main.h"
 #include <stdio.h>
@@ -227,11 +221,11 @@ julien@ubuntu:~/0x06$
 
 **Repo:**
 
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x06-pointers_arrays_strings`
--   File: `2-strncpy.c`
+- GitHub repository: `alx-low_level_programming`
+- Directory: `0x06-pointers_arrays_strings`
+- File: `2-strncpy.c`
 
- Done? Help
+Done? Help
 
 ### 3\. strcmp
 
@@ -239,12 +233,12 @@ mandatory
 
 Write a function that compares two strings.
 
--   Prototype: `int _strcmp(char *s1, char *s2);`
--   Your function should work exactly like `strcmp`
+- Prototype: `int _strcmp(char *s1, char *s2);`
+- Your function should work exactly like `strcmp`
 
 FYI: The standard library provides a similar function: `strcmp`. Run `man strcmp` to learn more.
 
-```
+```sh
 julien@ubuntu:~/0x06$ cat 3-main.c
 #include "main.h"
 #include <stdio.h>
@@ -275,11 +269,11 @@ julien@ubuntu:~/0x06$
 
 **Repo:**
 
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x06-pointers_arrays_strings`
--   File: `3-strcmp.c`
+- GitHub repository: `alx-low_level_programming`
+- Directory: `0x06-pointers_arrays_strings`
+- File: `3-strcmp.c`
 
- Done? Help
+Done? Help
 
 ### 4\. I am a kind of paranoid in reverse. I suspect people of plotting to make me happy
 
@@ -287,10 +281,10 @@ mandatory
 
 Write a function that reverses the content of an array of integers.
 
--   Prototype: `void reverse_array(int *a, int n);`
--   Where `n` is the number of elements of the array
+- Prototype: `void reverse_array(int *a, int n);`
+- Where `n` is the number of elements of the array
 
-```
+```sh
 julien@ubuntu:~/0x06$ cat 4-main.c
 #include "main.h"
 #include <stdio.h>
@@ -343,11 +337,11 @@ julien@ubuntu:~/0x06$
 
 **Repo:**
 
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x06-pointers_arrays_strings`
--   File: `4-rev_array.c`
+- GitHub repository: `alx-low_level_programming`
+- Directory: `0x06-pointers_arrays_strings`
+- File: `4-rev_array.c`
 
- Done? Help
+Done? Help
 
 ### 5\. Always look up
 
@@ -355,9 +349,9 @@ mandatory
 
 Write a function that changes all lowercase letters of a string to uppercase.
 
--   Prototype: `char *string_toupper(char *);`
+- Prototype: `char *string_toupper(char *);`
 
-```
+```sh
 julien@ubuntu:~/0x06$ cat 5-main.c
 #include "main.h"
 #include <stdio.h>
@@ -387,11 +381,11 @@ julien@ubuntu:~/0x06$
 
 **Repo:**
 
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x06-pointers_arrays_strings`
--   File: `5-string_toupper.c`
+- GitHub repository: `alx-low_level_programming`
+- Directory: `0x06-pointers_arrays_strings`
+- File: `5-string_toupper.c`
 
- Done? Help
+Done? Help
 
 ### 6\. Expect the best. Prepare for the worst. Capitalize on what comes
 
@@ -399,10 +393,10 @@ mandatory
 
 Write a function that capitalizes all words of a string.
 
--   Prototype: `char *cap_string(char *);`
--   Separators of words: space, tabulation, new line, `,`, `;`, `.`, `!`, `?`, `"`, `(`, `)`, `{`, and `}`
+- Prototype: `char *cap_string(char *);`
+- Separators of words: space, tabulation, new line, `,`, `;`, `.`, `!`, `?`, `"`, `(`, `)`, `{`, and `}`
 
-```
+```sh
 julien@ubuntu:~/0x06$ cat 6-main.c
 #include "main.h"
 #include <stdio.h>
@@ -434,35 +428,35 @@ julien@ubuntu:~/0x06$
 
 **Repo:**
 
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x06-pointers_arrays_strings`
--   File: `6-cap_string.c`
+- GitHub repository: `alx-low_level_programming`
+- Directory: `0x06-pointers_arrays_strings`
+- File: `6-cap_string.c`
 
- Done? Help
+Done? Help
 
 ### 7\. Mozart composed his music not for the elite, but for everybody
 
 mandatory
 
-Write a function that encodes a string into [1337](https://alx-intranet.hbtn.io/rltoken/9v9KfpvWnL0GoMu5mozbug "1337").
+Write a function that encodes a string into [1337](https://alx-intranet.hbtn.io/rltoken/9v9KfpvWnL0GoMu5mozbug '1337').
 
--   Letters `a` and `A` should be replaced by `4`
+- Letters `a` and `A` should be replaced by `4`
 
--   Letters `e` and `E` should be replaced by `3`
+- Letters `e` and `E` should be replaced by `3`
 
--   Letters `o` and `O` should be replaced by `0`
+- Letters `o` and `O` should be replaced by `0`
 
--   Letters `t` and `T` should be replaced by `7`
+- Letters `t` and `T` should be replaced by `7`
 
--   Letters `l` and `L` should be replaced by `1`
+- Letters `l` and `L` should be replaced by `1`
 
--   Prototype: `char *leet(char *);`
--   You can only use one `if` in your code
--   You can only use two loops in your code
--   You are not allowed to use `switch`
--   You are not allowed to use any ternary operation
+- Prototype: `char *leet(char *);`
+- You can only use one `if` in your code
+- You can only use two loops in your code
+- You are not allowed to use `switch`
+- You are not allowed to use any ternary operation
 
-```
+```sh
 julien@ubuntu:~/0x06$ cat 7-main.c
 #include "main.h"
 #include <stdio.h>
@@ -492,25 +486,24 @@ julien@ubuntu:~/0x06$
 
 **Repo:**
 
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x06-pointers_arrays_strings`
--   File: `7-leet.c`
-
+- GitHub repository: `alx-low_level_programming`
+- Directory: `0x06-pointers_arrays_strings`
+- File: `7-leet.c`
 
 ### 8\. rot13
 
-#advanced
+advanced
 
-Write a function that encodes a string using [rot13](https://alx-intranet.hbtn.io/rltoken/YRxmNA7BnP6yZhl09TKX3A "rot13").
+Write a function that encodes a string using [rot13](https://alx-intranet.hbtn.io/rltoken/YRxmNA7BnP6yZhl09TKX3A 'rot13').
 
--   Prototype: `char *rot13(char *);`
+- Prototype: `char *rot13(char *);`
 
--   You can only use `if` statement once in your code
--   You can only use two loops in your code
--   You are not allowed to use `switch`
--   You are not allowed to use any ternary operation
+- You can only use `if` statement once in your code
+- You can only use two loops in your code
+- You are not allowed to use `switch`
+- You are not allowed to use any ternary operation
 
-```
+```sh
 julien@ubuntu:~/0x06$ cat 100-main.c
 #include "main.h"
 #include <stdio.h>
@@ -560,25 +553,25 @@ julien@ubuntu:~/0x06$
 
 **Repo:**
 
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x06-pointers_arrays_strings`
--   File: `100-rot13.c`
+- GitHub repository: `alx-low_level_programming`
+- Directory: `0x06-pointers_arrays_strings`
+- File: `100-rot13.c`
 
- Done? Help Check your code
+Done? Help Check your code
 
 ### 9\. Numbers have life; they're not just symbols on paper
 
-#advanced
+advanced
 
 Write a function that prints an integer.
 
--   Prototype: `void print_number(int n);`
--   You can only use `_putchar` function to print
--   You are not allowed to use `long`
--   You are not allowed to use arrays or pointers
--   You are not allowed to hard-code special values
+- Prototype: `void print_number(int n);`
+- You can only use `_putchar` function to print
+- You are not allowed to use `long`
+- You are not allowed to use arrays or pointers
+- You are not allowed to hard-code special values
 
-```
+```sh
 julien@ubuntu:~/0x06$ cat 101-main.c
 #include "main.h"
 
@@ -614,56 +607,56 @@ julien@ubuntu:~/0x06$
 
 **Repo:**
 
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x06-pointers_arrays_strings`
--   File: `101-print_number.c`
+- GitHub repository: `alx-low_level_programming`
+- Directory: `0x06-pointers_arrays_strings`
+- File: `101-print_number.c`
 
- Done? Help Check your code
+Done? Help Check your code
 
 ### 10\. A dream doesn't become reality through magic; it takes sweat, determination and hard work
 
-#advanced
+advanced
 
-![](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/21b4fc5c1b5df84e6ae4fe8807aa359d929e748a.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU65GPZGY3%2F20210909%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210909T112251Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=19734984d34c3775ce10fae611a59f01ebfcf756e4c449099bed7e8b6ecaea64)
+![magic](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/21b4fc5c1b5df84e6ae4fe8807aa359d929e748a.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU65GPZGY3%2F20210909%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210909T112251Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=19734984d34c3775ce10fae611a59f01ebfcf756e4c449099bed7e8b6ecaea64)
 
-Add one line to [this code](https://github.com/holbertonschool/make_magic_happen/blob/master/magic.c "this code"), so that the program prints `a[2] = 98`, followed by a new line.
+Add one line to [this code](https://github.com/holbertonschool/make_magic_happen/blob/master/magic.c 'this code'), so that the program prints `a[2] = 98`, followed by a new line.
 
--   You are not allowed to use the variable `a` in your new line of code
--   You are not allowed to modify the variable `p`
--   You can only write one statement
--   You are not allowed to use `,`
--   You are not allowed to code anything else than the line of expected line of code at the expected line
--   Your code should be written at line 19, before the `;`
--   Do not remove anything from the initial code (not even the comments)
--   and don't change anything but the line of code you are adding (don't change the spaces to tabs!)
--   You are allowed to use the standard library
+- You are not allowed to use the variable `a` in your new line of code
+- You are not allowed to modify the variable `p`
+- You can only write one statement
+- You are not allowed to use `,`
+- You are not allowed to code anything else than the line of expected line of code at the expected line
+- Your code should be written at line 19, before the `;`
+- Do not remove anything from the initial code (not even the comments)
+- and don't change anything but the line of code you are adding (don't change the spaces to tabs!)
+- You are allowed to use the standard library
 
 **Repo:**
 
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x06-pointers_arrays_strings`
--   File: `102-magic.c`
+- GitHub repository: `alx-low_level_programming`
+- Directory: `0x06-pointers_arrays_strings`
+- File: `102-magic.c`
 
- Done? Help Check your code
+Done? Help Check your code
 
 ### 11\. It is the addition of strangeness to beauty that constitutes the romantic character in art
 
-#advanced
+advanced
 
 Write a function that adds two numbers.
 
--   Prototype: `char *infinite_add(char *n1, char *n2, char *r, int size_r);`
+- Prototype: `char *infinite_add(char *n1, char *n2, char *r, int size_r);`
 
--   Where `n1` and `n2` are the two numbers
--   `r` is the buffer that the function will use to store the result
--   `size_r` is the buffer size
--   The function returns a pointer to the result
--   You can assume that you will always get positive numbers, or `0`
--   You can assume that there will be only digits in the strings `n1` and `n2`
--   `n1` and `n2` will never be empty
--   If the result can not be stored in `r` the function must return `0`
+- Where `n1` and `n2` are the two numbers
+- `r` is the buffer that the function will use to store the result
+- `size_r` is the buffer size
+- The function returns a pointer to the result
+- You can assume that you will always get positive numbers, or `0`
+- You can assume that there will be only digits in the strings `n1` and `n2`
+- `n1` and `n2` will never be empty
+- If the result can not be stored in `r` the function must return `0`
 
-```
+```sh
 julien@ubuntu:~/0x06$ cat 103-main.c
 #include "main.h"
 #include <stdio.h>
@@ -675,54 +668,54 @@ julien@ubuntu:~/0x06$ cat 103-main.c
  */
 int main(void)
 {
-        char *n = "1234567892434574367823574575678477685785645685876876774586734734563456453743756756784458";
-        char *m = "9034790663470697234682914569346259634958693246597324659762347956349265983465962349569346";
-        char r[100];
-        char r2[10];
-        char r3[11];
-        char *res;
+    char *n = "1234567892434574367823574575678477685785645685876876774586734734563456453743756756784458";
+    char *m = "9034790663470697234682914569346259634958693246597324659762347956349265983465962349569346";
+    char r[100];
+    char r2[10];
+    char r3[11];
+    char *res;
 
-        res = infinite_add(n, m, r, 100);
-        if (res == 0)
-        {
-                printf("Error\n");
-        }
-        else
-        {
-                printf("%s + %s = %s\n", n, m, res);
-        }
-        n = "1234567890";
-        m = "1";
-        res = infinite_add(n, m, r2, 10);
-        if (res == 0)
-        {
-                printf("Error\n");
-        }
-        else
-        {
-                printf("%s + %s = %s\n", n, m, res);
-        }
-        n = "999999999";
-        m = "1";
-        res = infinite_add(n, m, r2, 10);
-        if (res == 0)
-        {
-                printf("Error\n");
-        }
-        else
-        {
-                printf("%s + %s = %s\n", n, m, res);
-        }
-        res = infinite_add(n, m, r3, 11);
-        if (res == 0)
-        {
-                printf("Error\n");
-        }
-        else
-        {
-                printf("%s + %s = %s\n", n, m, res);
-        }
-        return (0);
+    res = infinite_add(n, m, r, 100);
+    if (res == 0)
+    {
+            printf("Error\n");
+    }
+    else
+    {
+            printf("%s + %s = %s\n", n, m, res);
+    }
+    n = "1234567890";
+    m = "1";
+    res = infinite_add(n, m, r2, 10);
+    if (res == 0)
+    {
+            printf("Error\n");
+    }
+    else
+    {
+            printf("%s + %s = %s\n", n, m, res);
+    }
+    n = "999999999";
+    m = "1";
+    res = infinite_add(n, m, r2, 10);
+    if (res == 0)
+    {
+            printf("Error\n");
+    }
+    else
+    {
+            printf("%s + %s = %s\n", n, m, res);
+    }
+    res = infinite_add(n, m, r3, 11);
+    if (res == 0)
+    {
+            printf("Error\n");
+    }
+    else
+    {
+            printf("%s + %s = %s\n", n, m, res);
+    }
+    return (0);
 }
 julien@ubuntu:~/0x06$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 103-main.c 103-infinite_add.c -o 103-add
 julien@ubuntu:~/0x06$ ./103-add
@@ -736,32 +729,32 @@ julien@ubuntu:~/0x06$
 
 **Repo:**
 
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x06-pointers_arrays_strings`
--   File: `103-infinite_add.c`
+- GitHub repository: `alx-low_level_programming`
+- Directory: `0x06-pointers_arrays_strings`
+- File: `103-infinite_add.c`
 
- Done? Help Check your code
+Done? Help Check your code
 
 ### 12\. Noise is a buffer, more effective than cubicles or booth walls
 
-#advanced
+advanced
 
 Write a function that prints a buffer.
 
--   Prototype: `void print_buffer(char *b, int size);`
+- Prototype: `void print_buffer(char *b, int size);`
 
--   The function must print the content of `size` bytes of the buffer pointed by `b`
+- The function must print the content of `size` bytes of the buffer pointed by `b`
 
--   The output should print 10 bytes per line
--   Each line starts with the position of the first byte of the line in hexadecimal (8 chars), starting with `0`
--   Each line shows the hexadecimal content (2 chars) of the buffer, 2 bytes at a time, separated by a space
--   Each line shows the content of the buffer. If the byte is a printable character, print the letter, if not, print `.`
--   Each line ends with a new line `\n`
--   If `size` is 0 or less, the output should be a new line only `\n`
--   You are allowed to use the standard library
--   The output should look like the following example, and formatted exactly the same way:
+- The output should print 10 bytes per line
+- Each line starts with the position of the first byte of the line in hexadecimal (8 chars), starting with `0`
+- Each line shows the hexadecimal content (2 chars) of the buffer, 2 bytes at a time, separated by a space
+- Each line shows the content of the buffer. If the byte is a printable character, print the letter, if not, print `.`
+- Each line ends with a new line `\n`
+- If `size` is 0 or less, the output should be a new line only `\n`
+- You are allowed to use the standard library
+- The output should look like the following example, and formatted exactly the same way:
 
-```
+```sh
 julien@ubuntu:~/0x06$ cat 104-main.c
 #include "main.h"
 #include <stdio.h>
@@ -803,6 +796,6 @@ julien@ubuntu:~/0x06$
 
 **Repo:**
 
--   GitHub repository: `alx-low_level_programming`
--   Directory: `0x06-pointers_arrays_strings`
--   File: `104-print_buffer.c`
+- GitHub repository: `alx-low_level_programming`
+- Directory: `0x06-pointers_arrays_strings`
+- File: `104-print_buffer.c`
