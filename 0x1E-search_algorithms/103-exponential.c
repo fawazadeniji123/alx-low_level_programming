@@ -3,7 +3,7 @@
 
 
 /**
- * binary_search - searches for a value in a sorted array of integers
+ * _binary_search - searches for a value in a sorted array of integers
  * using the binary search algorithm
  * @array: array of integers
  * @left: Left element
@@ -20,7 +20,7 @@ int _binary_search(int *array, size_t left, size_t right, int value)
 	if (array == NULL)
 		return (-1);
 
-	while (right > left)
+	while (left <= right)
 	{
 		printf("Searching in array: ");
 		for (i = left; i < right; i++)
